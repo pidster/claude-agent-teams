@@ -13,10 +13,9 @@ argument-hint: "[idea-name]"
 allowed-tools: Read, Glob, Grep, Write, Edit, Agent
 ---
 
-# Design-Next Skill
+# Design Skill
 
-A successor to `/design`, under active development. The old skill remains available;
-this one evolves through use. Expect to add rules as failure modes surface.
+A skill for creating a design document through a structured, dialogic process that elicits tacit knowledge early, assembles context in parallel, converges on commitments, and consolidates into a document that survives `/review-design`. Use when the user has an idea that hasn't yet been transcribed, analysed, and validated against the existing corpus. Trigger on phrases like "I want to build X", "I have an idea about Y", "let's think through Z", "how should we approach W", or any expression of an intent that hasn't yet been turned into an artefact. Prefer this over `/design` when the idea's scope, premise, or integration surface isn't already clear.
 
 ## Why a new skill
 
@@ -24,7 +23,6 @@ Observed failure modes in recent plan reviews:
 - **Premise absorbed from adjacent ecosystem** without audit (foreign-CI OIDC; SOC2-style
   compliance verdicts; cloud IAM ambient identity).
 - **Existing types reinvented** because the author didn't know they existed
-  (`cyclopes::Severity`, `CapabilityEnforcementMode`, `SecretScope`).
 - **Integration point undefined** — no declared binding to Vulcan's execution primitives
   (Effect variant, phase hook, capability grant, event type).
 - **Open questions deferred** into the phase they were meant to shape.
@@ -47,7 +45,7 @@ The user interacts with design content, not with phase commands.
 
 ```mermaid
 flowchart TD
-    Start(["/design-next &lt;idea&gt;"]) --> P1
+    Start(["/design &lt;idea&gt;"]) --> P1
 
     subgraph P1 ["Phase 1 — Elicitation (dialogic)"]
         direction TB
